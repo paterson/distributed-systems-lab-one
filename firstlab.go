@@ -8,15 +8,16 @@ import (
 )
 
 const (
+	CONNECTION_HOST = "10.62.0.189"
 	CONNECTION_TYPE = "tcp4"
 )
 
 func main() {
-	var host = ipaddress() + ":" + port()
-	conn, err := net.Dial(CONNECTION_TYPE, host)
+	var host = CONNECTION_HOST + ":" + port()
+	conn, err := net.Dial(CONNECTION_TYPE, host
 	checkError(err)
 
-	request := []byte(fmt.Sprintf("GET /echo.php?message=testing HTTP/1.0\r\nHost: %s\r\n\r\n", host))
+	request := []byte(fmt.Sprintf("GET /echo.php?message=testing HTTP/1.0\r\nHost: %s\r\n\r\n", host)
 
 	_, err = conn.Write(request)
 	checkError(err)
@@ -28,16 +29,9 @@ func main() {
 	os.Exit(0)
 }
 
-func ipaddress() string {
+func port() string {
 	if len(os.Args) > 1 && os.Args[1] != "" {
 		return os.Args[1]
-	}
-	return "10.62.0.189"
-}
-
-func port() string {
-	if len(os.Args) > 2 && os.Args[2] != "" {
-		return os.Args[2]
 	}
 	return "8000"
 }

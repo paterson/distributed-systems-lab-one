@@ -7,6 +7,7 @@
 ## Run
 
   * Run `firstlab` (It'll be automatically in the PATH so will work from anywhere)
+  * You can change the port by supplying an argument: e.g `firstlab 3001`. It will default to `8000` otherwise.
 
 ## Details
 
