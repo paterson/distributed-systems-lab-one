@@ -1,4 +1,6 @@
-# Distributed Systems Lab One
+# Distributed Systems Lab One 
+
+Niall Paterson #12305503
 
 ## Installation
 
