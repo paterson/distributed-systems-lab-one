@@ -14,10 +14,10 @@ const (
 
 func main() {
 	var host = CONNECTION_HOST + ":" + port()
-	conn, err := net.Dial(CONNECTION_TYPE, host
+	conn, err := net.Dial(CONNECTION_TYPE, host)
 	checkError(err)
 
-	request := []byte(fmt.Sprintf("GET /echo.php?message=testing HTTP/1.0\r\nHost: %s\r\n\r\n", host)
+	request := []byte(fmt.Sprintf("GET /echo.php?message=testing HTTP/1.0\r\nHost: %s\r\n\r\n", host))
 
 	_, err = conn.Write(request)
 	checkError(err)
