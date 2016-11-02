@@ -12,7 +12,7 @@
 
   * The client is currently pointing to one of my VM's, which is running the following command to run the server and keep it up:
 
-        `nohup php -S 0.0.0.0:8000 -t . > php.log &`
+        nohup php -S 0.0.0.0:8000 -t . > php.log &
          
   
   
